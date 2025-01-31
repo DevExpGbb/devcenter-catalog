@@ -2,3 +2,23 @@ name: App-Service-with-Cosmos_AZD-template.yaml
 
 on:
   workflow_dispatch:
+    inputs:
+      RepositoryUrl:
+        description: 'Path the the application source code'
+        required: true
+        default: 'warning'
+        type: string
+        options:
+          - "https://github.com/azure-samples/todo-java-mongo"
+          - "https://github.com/azure-samples/todo-nodejs-mongo"
+          - "https://github.com/azure-samples/todo-python-mongo"   
+      RuntimeType:
+        description: 'Runtime Type of the App Service runtime,eg python, nodejs or java.'
+        required: true
+        default: 'warning'
+        type: choice
+        options:
+          - "python"
+          - "nodejs"
+          - "java"
+    
