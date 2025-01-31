@@ -1,0 +1,4 @@
+name: ContainerApp
+
+on:
+  workflow_dispatch:
