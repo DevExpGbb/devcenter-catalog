@@ -1,0 +1,4 @@
+name: App-Service-with-Cosmos_AZD-template.yaml
+
+on:
+  workflow_dispatch:
