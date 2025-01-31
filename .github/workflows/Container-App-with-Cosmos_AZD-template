@@ -1,0 +1,4 @@
+name: Container-App-with-Cosmos_AZD-template
+
+on:
+  workflow_dispatch:
