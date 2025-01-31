@@ -1,8 +1,20 @@
-name: App-Service-with-Cosmos_AZD-template.yaml
+name: App-Service-with-Cosmos_AZD-template
 
 on:
   workflow_dispatch:
     inputs:
+      ade-lifecycle-hook:
+        description: 'ADE Deploy Lifecycle Hook'
+        required: true
+        default: "deploy"
+        type: choice
+        options:
+          - "deploy"
+          - "destroy"
+      ade-prefix:
+        description: 'ADE Prefix Name'
+        required: true
+        type: string
       RepositoryUrl:
         description: 'Path the the application source code'
         required: true
@@ -21,4 +33,3 @@ on:
           - "python"
           - "nodejs"
           - "java"
-    
